@@ -5,7 +5,7 @@ spring:
     name: authentication-service
 
   datasource:
-    url: jdbc:mysql://localhost:3306/sistema_almacen?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://localhost:3306/arka?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
     username: root
     password: Developer123.
 
