@@ -55,11 +55,12 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())  // ✅ Deshabilitar CSRF para APIs
                 .authorizeHttpRequests(authorizeRequests -> authorizeRequests
                         .requestMatchers("/api/security/login").permitAll()
+                        .requestMatchers("/actuator/health").permitAll()
                         .anyRequest().authenticated())
                 .authenticationProvider(authenticationProvider())
                 .sessionManagement(session ->
                         session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)); // ✅ Sin sesiones para JWT
-        // ❌ QUITAR: .httpBasic(Customizer.withDefaults())
+
 
         return http.build();
     }
